@@ -1,0 +1,20 @@
+arch=arm
+baudrate=115200
+board=rugged_board_a5d2x
+board_name=rugged_board_a5d2x
+bootargs=console=ttyS0,115200 earlyprintk root=/dev/mmcblk1p2 rw rootwait
+bootcmd=fatload mmc 1 0x21000000 a5d2x-rugged_board.dtb; fatload mmc 1 0x22000000 zImage; bootz 0x22000000 - 0x21000000
+bootdelay=3
+cpu=armv7
+ethact=ethernet@f8008000
+ethaddr=04:91:62:d3:3a:7c
+fdtcontroladdr=23b75e70
+fileaddr=21f70000
+filesize=603e
+ipaddr=192.168.0.5
+serverip=192.168.0.4
+soc=at91
+stderr=serial@f8020000
+stdin=serial@f8020000
+stdout=serial@f8020000
+vendor=atmel
